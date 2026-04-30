@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regine Sam — Technology & Delivery Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #FAF8F5;
+    --surf: #F2EDE6;
+    --acc: #8B5E3C;
+    --acc2: #C49A6C;
+    --txt: #2C2416;
+    --muted: #7A6B58;
+    --brd: rgba(139,94,60,0.18);
+    --tag: #EDE6DB;
+    --max: 720px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--txt);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 0.5px solid var(--brd);
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+  }
+  .nav-name {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--acc); }
+
+  /* ── HERO ── */
+  .hero { margin-bottom: 3rem; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--acc);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--acc); }
+  .hero-bio {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 580px;
+    margin-bottom: 1.4rem;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    background: var(--tag);
+    color: var(--muted);
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .tag.acc { background: var(--acc); color: #FAF8F5; }
+
+  /* ── METRICS ── */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 3rem;
+  }
+  .metric {
+    background: var(--surf);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .metric-num {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--acc);
+    display: block;
+  }
+  .metric-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    display: block;
+    line-height: 1.4;
+  }
+
+  /* ── SECTION ── */
+  .sec { margin-bottom: 3rem; }
+  .sec-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--acc2);
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sec-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--brd);
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .sk { background: var(--surf); border-radius: 10px; padding: 0.9rem 1.1rem; }
+  .sk-title { font-size: 12px; font-weight: 500; margin-bottom: 7px; }
+  .sk-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .sk-pill {
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(139,94,60,0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  /* ── AWARD BAR ── */
+  .award-bar {
+    background: rgba(196,154,108,0.12);
+    border: 0.5px solid var(--acc2);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.4rem;
+  }
+  .award-bar .icon { font-size: 20px; flex-shrink: 0; }
+  .award-bar p { font-size: 13px; color: var(--txt); line-height: 1.55; }
+  .award-bar strong { font-weight: 500; color: var(--acc); }
+
+  /* ── FEATURED CARDS ── */
+  .feat-sublabel {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--acc);
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+  }
+  .feat-grid { display: grid; gap: 12px; margin-bottom: 1.6rem; }
+  .feat-card {
+    border-radius: 12px;
+    border: 1.5px solid var(--acc2);
+    background: var(--bg);
+    padding: 1.2rem 1.4rem;
+    position: relative;
+  }
+  .feat-card::before {
+    content: 'KEY PROJECT';
+    position: absolute;
+    top: -1px;
+    right: 16px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    background: var(--acc2);
+    color: #FAF8F5;
+    padding: 2px 9px;
+    border-radius: 0 0 7px 7px;
+  }
+  .feat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+    gap: 10px;
+  }
+  .feat-title {
+    font-family: 'Lora', serif;
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    flex: 1;
+  }
+  .feat-result {
+    font-size: 11px;
+    font-weight: 500;
+    color: #FAF8F5;
+    background: var(--acc);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+  .feat-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.7rem; }
+  .chip { font-size: 10px; padding: 2px 8px; border-radius: 6px; }
+  .chip.period { background: var(--tag); color: var(--muted); }
+  .chip.org { background: rgba(139,94,60,0.1); color: var(--acc); }
+  .chip.size { background: rgba(196,154,108,0.15); color: var(--acc2); }
+  .chip.type { background: rgba(139,94,60,0.06); color: var(--muted); }
+  .feat-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 0.7rem;
+  }
+  .feat-highlights { display: flex; flex-wrap: wrap; gap: 6px; }
+  .hl {
+    font-size: 11px;
+    color: var(--acc);
+    background: rgba(139,94,60,0.07);
+    padding: 3px 9px;
+    border-radius: 6px;
+    border: 0.5px solid rgba(139,94,60,0.2);
+  }
+
+  /* ── STANDARD ROWS ── */
+  .std-sublabel {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+  .std-list { display: grid; gap: 8px; }
+  .std-row {
+    background: var(--surf);
+    border-radius: 10px;
+    border: 0.5px solid var(--brd);
+    padding: 0.85rem 1rem;
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    gap: 10px;
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+  .std-row:hover { border-color: var(--acc2); }
+  .std-num {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--acc2);
+    line-height: 1.1;
+    padding-top: 1px;
+  }
+  .std-title { font-size: 13.5px; font-weight: 500; margin-bottom: 3px; line-height: 1.3; }
+  .std-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 5px; }
+  .std-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+  .std-result {
+    font-size: 11px;
+    color: var(--acc2);
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: right;
+    padding-top: 2px;
+    min-width: 90px;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 22px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--brd);
+  }
+  .tl-item { position: relative; margin-bottom: 1.4rem; }
+  .tl-dot {
+    position: absolute;
+    left: -18px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--acc2);
+    border: 2px solid var(--bg);
+  }
+  .tl-dot.cur { background: var(--acc); }
+  .tl-dot.old { background: transparent; border-color: var(--acc2); }
+  .tl-dot.earliest { background: transparent; border-color: var(--brd); }
+  .tl-period { font-size: 11px; color: var(--acc2); letter-spacing: 0.05em; margin-bottom: 2px; font-weight: 500; }
+  .tl-role { font-size: 14px; font-weight: 500; margin-bottom: 1px; }
+  .tl-org { font-size: 13px; color: var(--muted); }
+  .tl-region { font-size: 11px; color: var(--acc2); margin-top: 3px; }
+  .tl-bullets { margin-top: 6px; padding-left: 15px; list-style: disc; }
+  .tl-bullets li { font-size: 12.5px; color: var(--muted); line-height: 1.65; margin-bottom: 2px; }
+  .tl-note { font-size: 12.5px; color: var(--muted); margin-top: 4px; line-height: 1.6; }
+  .tl-era {
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(139,94,60,0.45);
+    font-weight: 500;
+    margin: 1.4rem 0 1.1rem -22px;
+    padding-left: 22px;
+    border-top: 0.5px solid var(--brd);
+    padding-top: 0.8rem;
+  }
+
+  /* ── CERTS / EDU ── */
+  .certs { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 1.2rem; }
+  .cert {
+    background: var(--surf);
+    border: 0.5px solid var(--brd);
+    border-radius: 8px;
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--acc); flex-shrink: 0; }
+  .cert-dot.prog { background: var(--acc2); }
+  .cert-name { font-size: 13px; font-weight: 500; }
+  .cert-body { font-size: 11px; color: var(--muted); }
+  .edu-grid { display: grid; gap: 9px; }
+  .edu-item { display: flex; gap: 11px; align-items: flex-start; }
+  .edu-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--acc2); margin-top: 6px; flex-shrink: 0; }
+  .edu-deg { font-size: 13.5px; font-weight: 500; }
+  .edu-inst { font-size: 12px; color: var(--muted); }
+
+  /* ── CONTACT ── */
+  .contact-bar {
+    background: var(--surf);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid var(--brd);
+  }
+  .contact-bar h3 { font-family: 'Lora', serif; font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+  .contact-bar p { font-size: 13px; color: var(--muted); }
+  .contact-links { display: flex; gap: 9px; flex-shrink: 0; margin-left: 20px; }
+  .cbtn {
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 0.5px solid var(--acc);
+    color: var(--acc);
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .cbtn:hover { background: var(--acc); color: #FAF8F5; }
+  .cbtn.pri { background: var(--acc); color: #FAF8F5; }
+  .cbtn.pri:hover { background: #7A5233; }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(139,94,60,0.4);
+    padding: 2rem 0 0;
+    border-top: 0.5px solid var(--brd);
+    margin-top: 2rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 32px; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 14px; }
+    .contact-bar { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .contact-links { margin-left: 0; }
+    .std-row { grid-template-columns: 26px 1fr; }
+    .std-result { grid-column: 2; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-name">Regine Sam</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="about">
+    <div class="eyebrow">Technology &amp; Delivery Leader · Selangor, Malaysia</div>
+    <h1>Turning complex<br>programmes into<br><em>outcomes that last.</em></h1>
+    <p class="hero-bio">I'm a technology delivery professional with 25 years of experience — the last 10+ delivering enterprise platforms at Wealth-X and Altrata, a global data intelligence company. I bridge engineering and business: building delivery governance from scratch, managing 13-team multi-vendor programmes, and rescuing projects under pressure. Fluent in English, Mandarin, Cantonese, and Malay.</p>
+    <div class="tags">
+      <span class="tag acc">EN · 中文 · Cantonese · BM</span>
+      <span class="tag">Programme Management</span>
+      <span class="tag">RAID &amp; Governance</span>
+      <span class="tag">Agile &amp; Hybrid Delivery</span>
+      <span class="tag">AWS Cloud</span>
+      <span class="tag">Salesforce Integration</span>
+      <span class="tag">ITIL Certified</span>
+      <span class="tag">SteerCo Reporting</span>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="metric"><span class="metric-num">25+</span><span class="metric-label">Years of experience</span></div>
+    <div class="metric"><span class="metric-num">~95%</span><span class="metric-label">On-time delivery rate</span></div>
+    <div class="metric"><span class="metric-num">16</span><span class="metric-label">Engineering team led</span></div>
+    <div class="metric"><span class="metric-num">13</span><span class="metric-label">Scrum teams coordinated</span></div>
+  </div>
+
+  <!-- SKILLS -->
+  <section class="sec">
+    <div class="sec-label">Core competencies</div>
+    <div class="skills-grid">
+      <div class="sk"><div class="sk-title">Programme &amp; Delivery</div><div class="sk-pills"><span class="sk-pill">RAID Management</span><span class="sk-pill">SteerCo Reporting</span><span class="sk-pill">Scrum of Scrums</span><span class="sk-pill">Release Planning</span><span class="sk-pill">Dependency Mgmt</span></div></div>
+      <div class="sk"><div class="sk-title">Technical Platforms</div><div class="sk-pills"><span class="sk-pill">AWS Cloud</span><span class="sk-pill">Salesforce CRM</span><span class="sk-pill">REST APIs</span><span class="sk-pill">Databricks</span><span class="sk-pill">Elasticsearch</span><span class="sk-pill">Java</span><span class="sk-pill">Jira &amp; Confluence</span></div></div>
+      <div class="sk"><div class="sk-title">Leadership &amp; Stakeholders</div><div class="sk-pills"><span class="sk-pill">Engineering Leadership</span><span class="sk-pill">Vendor Management</span><span class="sk-pill">Executive Reporting</span><span class="sk-pill">Cross-cultural Teams</span></div></div>
+      <div class="sk"><div class="sk-title">Methodologies</div><div class="sk-pills"><span class="sk-pill">Agile / Scrum</span><span class="sk-pill">Hybrid Delivery</span><span class="sk-pill">Waterfall</span><span class="sk-pill">SDLC</span><span class="sk-pill">ITIL</span><span class="sk-pill">CI/CD</span></div></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="sec" id="projects">
+    <div class="sec-label">Projects — top 10</div>
+
+    <div class="award-bar">
+      <div class="icon">🏆</div>
+      <p><strong>Pillars of Success Award — Q4 2024 · Altrata</strong><br>Recognized for on-time delivery of the C&amp;E API and Salesforce releases under sustained cross-team delivery pressure across a 13-team programme.</p>
+    </div>
+
+    <!-- KEY PROJECTS -->
+    <div class="feat-sublabel">Key projects</div>
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-top">
+          <div class="feat-title">AAA — Authentication, Authorization &amp; Account</div>
+          <div class="feat-result">On time</div>
+        </div>
+        <div class="feat-chips">
+          <span class="chip period">Jun 2023 – Apr 2024</span>
+          <span class="chip org">Altrata</span>
+          <span class="chip size">23 people · 10 months</span>
+          <span class="chip type">Built from scratch</span>
+        </div>
+        <p class="feat-desc">Security backbone for the entire Altrata platform — built from zero across 3 cross-functional teams covering web, Profile API, Datafeed, and Salesforce. Established pentest sign-off as a mandatory release gate programme-wide. Ran biweekly SoS and RAID reviews; verified deliverables with PO each sprint; maintained formal sign-off documentation throughout.</p>
+        <div class="feat-highlights">
+          <span class="hl">Platform-wide security foundation</span>
+          <span class="hl">Built from zero</span>
+          <span class="hl">Pentest gate — set programme-wide</span>
+          <span class="hl">3 cross-functional teams</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-top">
+          <div class="feat-title">Salesforce Integration — Full 3-Phase Suite 🏆</div>
+          <div class="feat-result">All 3 published</div>
+        </div>
+        <div class="feat-chips">
+          <span class="chip period">Jan 2024 – Nov 2025</span>
+          <span class="chip org">Altrata</span>
+          <span class="chip size">16–23 people per phase</span>
+          <span class="chip type">Salesforce.org · API-dependent</span>
+        </div>
+        <p class="feat-desc">Delivered all 3 phases of Altrata's Salesforce product suite end-to-end: Phase 1 (C&amp;E) enriched contact records with company and executive data — won Pillars of Success Award; Phase 2 (Relationship) added network mapping to 2nd degree; Phase 3 (Wealth) added net worth, philanthropy, and personal interests. Managed API dependency chains, monthly SteerCo, and biweekly SoS across all phases.</p>
+        <div class="feat-highlights">
+          <span class="hl">Award-winning delivery (Ph1)</span>
+          <span class="hl">3 phases end-to-end</span>
+          <span class="hl">API dependency management</span>
+          <span class="hl">SteerCo reporting</span>
+          <span class="hl">Published to Salesforce.org</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-top">
+          <div class="feat-title">Bedrock Phase I — CTO-Directed Rescue</div>
+          <div class="feat-result">Deadline saved</div>
+        </div>
+        <div class="feat-chips">
+          <span class="chip period">Jan – Mar 2022</span>
+          <span class="chip org">Wealth-X</span>
+          <span class="chip size">13 people</span>
+          <span class="chip type">Mid-project takeover</span>
+        </div>
+        <p class="feat-desc">Brought in by the CTO to recover a project already 4 weeks behind with a non-negotiable vendor contract deadline. Assessed root causes, reworked scope and estimates with the Team Lead, and presented a CTO-approved revised plan. Ran daily stakeholder updates and weekly CTO reports; protected the critical path by deferring lower-priority items; navigated significant data integrity issues during testing.</p>
+        <div class="feat-highlights">
+          <span class="hl">CTO-directed rescue</span>
+          <span class="hl">Non-negotiable deadline met</span>
+          <span class="hl">Scope reset under pressure</span>
+          <span class="hl">Stakeholder recovery comms</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-top">
+          <div class="feat-title">Search Engine Migration — Elasticsearch</div>
+          <div class="feat-result">~$20k/mo saved</div>
+        </div>
+        <div class="feat-chips">
+          <span class="chip period">Oct 2016 – Oct 2017</span>
+          <span class="chip org">Wealth-X</span>
+          <span class="chip size">6 people</span>
+          <span class="chip type">Hard deadline: subscription expiry</span>
+        </div>
+        <p class="feat-desc">Built a proprietary Elasticsearch search engine from scratch to replace a costly third-party Transparensee subscription under a hard deadline tied to its expiry. Led from gap analysis and architecture confirmation through development oversight, code reviews, and comprehensive behavioural and performance testing. Obtained CTO sign-off on the schedule before proceeding.</p>
+        <div class="feat-highlights">
+          <span class="hl">Quantified cost saving</span>
+          <span class="hl">Built in-house from scratch</span>
+          <span class="hl">Hard deadline delivered</span>
+          <span class="hl">Technical depth + delivery</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- OTHER PROJECTS -->
+    <div class="std-sublabel">Other projects</div>
+    <div class="std-list">
+
+      <div class="std-row">
+        <div class="std-num">05</div>
+        <div class="std-body">
+          <div class="std-title">Wealth Profile Build</div>
+          <div class="std-meta">
+            <span class="chip period">Sep 2025 – present</span>
+            <span class="chip org">Altrata</span>
+            <span class="chip size">21 people</span>
+          </div>
+          <div class="std-desc">Internet-sourced wealth data pipeline — keyword search, extraction, standardization, and ingestion into client-facing platform. Prototype verified and signed off by PO; project continuing under UK team.</div>
+        </div>
+        <div class="std-result">Prototype ✓</div>
+      </div>
+
+      <div class="std-row">
+        <div class="std-num">06</div>
+        <div class="std-body">
+          <div class="std-title">Annual Report Extraction System</div>
+          <div class="std-meta">
+            <span class="chip period">Sep – Dec 2025</span>
+            <span class="chip org">Altrata</span>
+            <span class="chip size">10 people</span>
+          </div>
+          <div class="std-desc">Automated pipeline to source, extract, and ingest public company annual reports under a fixed January 2026 go-live deadline. System fully operational and ready ahead of schedule.</div>
+        </div>
+        <div class="std-result">On time</div>
+      </div>
+
+      <div class="std-row">
+        <div class="std-num">07</div>
+        <div class="std-body">
+          <div class="std-title">Profile Requests — Credit-Based Request Management</div>
+          <div class="std-meta">
+            <span class="chip period">Jan – Nov 2025</span>
+            <span class="chip org">Altrata</span>
+            <span class="chip size">20 people · 2 teams</span>
+          </div>
+          <div class="std-desc">End-to-end request management service across 3 integrated components (Request API, web form, admin portal) built by 2 separate engineering teams. Released as part of the Web App launch.</div>
+        </div>
+        <div class="std-result">On time</div>
+      </div>
+
+      <div class="std-row">
+        <div class="std-num">08</div>
+        <div class="std-body">
+          <div class="std-title">Profile &amp; Search API — C&amp;E + Wealth (Phases 1 &amp; 2)</div>
+          <div class="std-meta">
+            <span class="chip period">Jan 2024 – Nov 2025</span>
+            <span class="chip org">Altrata</span>
+            <span class="chip size">17 people</span>
+          </div>
+          <div class="std-desc">Foundational API as the central integration point for all Altrata products. Phase 2 extended with wealth intelligence. Managed major downstream dependencies; biweekly SoS and RAID throughout.</div>
+        </div>
+        <div class="std-result">Ph1 on time · Ph2 +2wk</div>
+      </div>
+
+      <div class="std-row">
+        <div class="std-num">09</div>
+        <div class="std-body">
+          <div class="std-title">Altrata Insights — BI &amp; Real-Time Analytics</div>
+          <div class="std-meta">
+            <span class="chip period">Jul – Oct 2025</span>
+            <span class="chip org">Altrata</span>
+            <span class="chip size">8 people</span>
+          </div>
+          <div class="std-desc">Consolidated 2 BI workstreams into one programme. Built AWS CloudWatch → Databricks pipeline for real-time usage analytics serving Business Operations and Product teams.</div>
+        </div>
+        <div class="std-result">On hold (budget)</div>
+      </div>
+
+      <div class="std-row">
+        <div class="std-num">10</div>
+        <div class="std-body">
+          <div class="std-title">On-Premises Screening Software Suite</div>
+          <div class="std-meta">
+            <span class="chip period">May 2017 – Mar 2018</span>
+            <span class="chip org">Wealth-X</span>
+            <span class="chip size">9 people</span>
+          </div>
+          <div class="std-desc">Locally-installed screening software for high-security clients — packaged as Windows and macOS installers (VirtualBox), data encrypted at rest and in transit. Personally built the macOS installer in ShellScript and AppleScript. Supported presales meetings and provided on-site client installation during rollout.</div>
+        </div>
+        <div class="std-result">On time · 2 platforms</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section class="sec" id="career">
+    <div class="sec-label">Career — full history</div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot cur"></div>
+        <div class="tl-period">2026 — Present</div>
+        <div class="tl-role">Open to senior IT &amp; technology leadership roles</div>
+        <div class="tl-org">Actively seeking opportunities · Kuala Lumpur / Selangor, Malaysia</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Apr 2023 — Dec 2025 · 2 yrs 9 mos</div>
+        <div class="tl-role">Senior Project Manager (Technology Delivery Lead)</div>
+        <div class="tl-org">Altrata (formerly Wealth-X) · Selangor, Malaysia</div>
+        <div class="tl-region">Global teams — Malaysia, UK, US, India</div>
+        <ul class="tl-bullets">
+          <li>Led 5–8 concurrent global initiatives across AWS data platforms, APIs, and enterprise reporting</li>
+          <li>Built delivery governance (RAID, SoS, SteerCo) across a 13-team multi-vendor programme</li>
+          <li>Won Pillars of Success Award Q4 2024</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">May 2020 — Mar 2023 · 3 yrs 1 mo</div>
+        <div class="tl-role">Director of Software Development</div>
+        <div class="tl-org">Wealth-X Services Sdn. Bhd. · Selangor, Malaysia</div>
+        <div class="tl-region">incl. Acting Head of Technology (~6 months)</div>
+        <ul class="tl-bullets">
+          <li>Led 16-person engineering organization (dev, QA, DevOps, app support) on AWS</li>
+          <li>Standardized Agile delivery frameworks — improved efficiency by ~20%</li>
+          <li>Built portfolio governance and C-level reporting structures from scratch</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Oct 2018 — Apr 2020 · 1 yr 5 mos</div>
+        <div class="tl-role">Senior Software Development Manager</div>
+        <div class="tl-org">Wealth-X Services Sdn. Bhd. · Selangor, Malaysia</div>
+        <ul class="tl-bullets">
+          <li>Led Agile Scrum teams — 10+ initiatives at ~95% on-time delivery rate</li>
+          <li>Mentored 8 developers; several advanced to senior and lead roles</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-period">Nov 2013 — Oct 2018 · 4 yrs 11 mos</div>
+        <div class="tl-role">Application Development Manager</div>
+        <div class="tl-org">Wealth-X Services Sdn. Bhd. · Selangor, Malaysia</div>
+        <ul class="tl-bullets">
+          <li>Hands-on Java development + led 7-person team on AWS-hosted systems</li>
+          <li>Sole developer for internal Salesforce CRM integration API (2015–2016)</li>
+          <li>Expanded local team to replace Singapore-based headcount</li>
+        </ul>
+      </div>
+
+      <div class="tl-era">Earlier career — Software Engineering &amp; Leadership · 2000–2013</div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">May 2012 — Nov 2013 · 1 yr 7 mos</div>
+        <div class="tl-role">Senior Software Developer</div>
+        <div class="tl-org">S5 System Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Web-based modules for a national security border control system. Built secure immigration management components using JSF, Hibernate JPA, and MySQL.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Sep 2006 — Apr 2012 · 5 yrs 8 mos</div>
+        <div class="tl-role">Team Lead</div>
+        <div class="tl-org">Tradeship Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Led team delivering a Shipping Container Repair and Tracking System. Container tracking and EDI integration using JSF, EJB, Hibernate, Oracle.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Aug 2005 — Sep 2006 · 1 yr 2 mos</div>
+        <div class="tl-role">Senior Consultant I</div>
+        <div class="tl-org">Agenda Solution Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Enterprise system enhancements for DHL's global Delivery Order Tracking System and Telekom Malaysia's COINS-ES platform.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Jun 2004 — Jul 2005 · 1 yr 2 mos</div>
+        <div class="tl-role">Java Developer</div>
+        <div class="tl-org">Silverlake Corporation · Malaysia</div>
+        <div class="tl-note">SCIB Internet Banking System — treasury, remittance, and inter-bank transfer modules. SQL query optimization for transaction processing performance.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Dec 2003 — Jun 2004 · 7 mos</div>
+        <div class="tl-role">IT Specialist</div>
+        <div class="tl-org">IAS Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Student Health Record System — development support and Java 2 codebase migration for educational institutions.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Nov 2002 — Nov 2003 · 1 yr 1 mo</div>
+        <div class="tl-role">Software Developer</div>
+        <div class="tl-org">Krisbiz Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Multilingual eCommerce and enterprise applications — procurement, reporting, risk management. Legacy data migration to relational databases.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot old"></div>
+        <div class="tl-period">Jan 2002 — Nov 2002 · 11 mos</div>
+        <div class="tl-role">Senior Software Engineer</div>
+        <div class="tl-org">PDX BizSystem Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Inventory and maintenance modules for enterprise applications; led 3 junior developers and coordinated cross-system integration.</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot earliest"></div>
+        <div class="tl-period">Jun 2000 — Dec 2001 · 1 yr 6 mos</div>
+        <div class="tl-role">Software Engineer</div>
+        <div class="tl-org">PDX BizSystem Sdn Bhd · Malaysia</div>
+        <div class="tl-note">Web-based eCommerce modules — procurement, sales, inventory, and logistics across the full SDLC.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTS & EDU -->
+  <section class="sec">
+    <div class="sec-label">Certifications &amp; training</div>
+    <div class="certs">
+      <div class="cert"><div class="cert-dot"></div><div><div class="cert-name">ITIL® Foundation</div><div class="cert-body">IT Service Management · Apr 2014</div></div></div>
+      <div class="cert"><div class="cert-dot prog"></div><div><div class="cert-name">PMP® — In progress</div><div class="cert-body">Prep course completed Apr 2026</div></div></div>
+      <div class="cert"><div class="cert-dot"></div><div><div class="cert-name">GenAI Essentials</div><div class="cert-body">AWS · Dec 2025</div></div></div>
+      <div class="cert"><div class="cert-dot"></div><div><div class="cert-name">MLOps Engineering</div><div class="cert-body">AWS · Dec 2025</div></div></div>
+    </div>
+    <div class="sec-label" style="margin-top: 1.5rem;">Education</div>
+    <div class="edu-grid">
+      <div class="edu-item"><div class="edu-dot"></div><div><div class="edu-deg">BSc (Hons) in Computing</div><div class="edu-inst">Staffordshire University · 2001</div></div></div>
+      <div class="edu-item"><div class="edu-dot"></div><div><div class="edu-deg">Higher Diploma in Business Information Technology</div><div class="edu-inst">APIIT College · 1999</div></div></div>
+      <div class="edu-item"><div class="edu-dot"></div><div><div class="edu-deg">Certificate in Computer Studies</div><div class="edu-inst">Tunku Abdul Rahman College · 1997</div></div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec" id="contact">
+    <div class="contact-bar">
+      <div>
+        <h3>Let's talk about your next programme.</h3>
+        <p>Open to senior technology &amp; delivery leadership roles in Malaysia.</p>
+      </div>
+      <div class="contact-links">
+        <a class="cbtn" href="https://linkedin.com/in/regine-sam" target="_blank">LinkedIn</a>
+        <a class="cbtn pri" href="mailto:regine.sam@gmail.com">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    regine.sam@gmail.com &nbsp;·&nbsp; linkedin.com/in/regine-sam &nbsp;·&nbsp; Selangor, Malaysia
+  </div>
+
+</div>
+
+</body>
+</html>
