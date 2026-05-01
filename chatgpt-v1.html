@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regine Sam | Technical Program Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 bg-white shadow z-10">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between">
+      <span class="font-semibold">Regine Sam</span>
+      <div class="space-x-4 text-sm">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#case" class="hover:text-blue-600">Case Studies</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-6 py-16 fade-up">
+      <h1 class="text-4xl font-bold mb-4">Regine Sam</h1>
+      <h2 class="text-xl text-gray-600 mb-4">Technical Program Manager | Enterprise Platforms & Delivery</h2>
+      <p class="text-gray-700 max-w-3xl mb-6">
+        Led delivery across <strong>13 teams</strong>, managing <strong>3–5 concurrent programmes</strong>, with <strong>~95% on-time delivery</strong> across AWS, Salesforce, and APIs.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">13 Teams</span>
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">3–5 Projects</span>
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">95% On-Time</span>
+        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">$20K/mo Saved</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-12 fade-up">
+    <h3 class="text-2xl font-semibold mb-4">About</h3>
+    <p class="text-gray-700 leading-relaxed">
+      Technical Program Manager with 25 years in tech and 10+ years in enterprise data platforms. Scaled engineering teams from 3 to 16 and led delivery across complex, multi-team environments.
+    </p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold mb-6">Key Delivery Highlights</h3>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition fade-up">
+        <h4 class="font-semibold mb-2">AAA Platform</h4>
+        <p class="text-sm text-gray-600">3 teams · 10 months</p>
+        <p class="mt-2 text-gray-700">Built core security platform enabling integration across 13 teams.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition fade-up">
+        <h4 class="font-semibold mb-2">Bedrock Rescue</h4>
+        <p class="text-sm text-gray-600">4-week delay recovered</p>
+        <p class="mt-2 text-gray-700">Reset scope and delivered before contract deadline.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition fade-up">
+        <h4 class="font-semibold mb-2">Salesforce Integration</h4>
+        <p class="text-sm text-gray-600">3 phases</p>
+        <p class="mt-2 text-gray-700">Improved data visibility across business teams.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition fade-up">
+        <h4 class="font-semibold mb-2">Search Optimisation</h4>
+        <p class="text-sm text-gray-600">$20K/month saved</p>
+        <p class="mt-2 text-gray-700">Replaced vendor tool with in-house solution.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="case" class="bg-gray-100 py-12">
+    <div class="max-w-5xl mx-auto px-6 space-y-8">
+
+      <div class="bg-white p-6 rounded-xl shadow fade-up">
+        <h3 class="text-xl font-semibold mb-3">AAA Platform</h3>
+        <p class="text-gray-700">Built from scratch under multi-team dependency pressure. Delivered secure authentication foundation across entire platform.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow fade-up">
+        <h3 class="text-xl font-semibold mb-3">Bedrock Rescue</h3>
+        <p class="text-gray-700">Recovered failing project under CTO direction and delivered within fixed contractual deadline.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-12 fade-up">
+    <h3 class="text-2xl font-semibold mb-4">Contact</h3>
+    <p class="text-gray-700">Open to Technical Program Manager roles (MY / SG)</p>
+    <p class="mt-2">Email: regine.sam@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/regine-sam</p>
+  </section>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
