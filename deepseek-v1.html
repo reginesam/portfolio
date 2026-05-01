@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Regine Sam · Technical Program Manager · Portfolio</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f7fb;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            color: #1a2c3e;
+            line-height: 1.45;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* cards & sections */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+            margin-bottom: 2rem;
+            padding: 2rem 2rem;
+            transition: box-shadow 0.2s;
+            border: 1px solid #eef2f6;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            border-left: 5px solid #2b6a9f;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: #0f2b3b;
+        }
+
+        .section-subhead {
+            font-size: 0.9rem;
+            color: #4a627a;
+            margin-top: -0.8rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            font-weight: 400;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* skill badges */
+        .skill-group {
+            background: #f8fafd;
+            border-radius: 20px;
+            padding: 1.2rem;
+            transition: all 0.1s;
+        }
+
+        .skill-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0.25rem 0 0.75rem 0;
+            color: #0f2b3b;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #dce5ec;
+            border-radius: 40px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #1f4e6e;
+        }
+
+        /* project items */
+        .project-item {
+            border-bottom: 1px solid #eef2f8;
+            padding: 1.25rem 0;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1d4e6e;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            color: #5b7a9a;
+            font-weight: 500;
+        }
+
+        .project-outcome {
+            font-weight: 700;
+            color: #1f6e43;
+            background: #eef8f0;
+            display: inline-block;
+            padding: 0.15rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        .project-desc {
+            margin: 0.5rem 0 0.3rem;
+            color: #2c445c;
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        .compact-project {
+            margin: 0.75rem 0;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eff3f8;
+        }
+        .compact-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .compact-desc {
+            font-size: 0.85rem;
+            color: #3a5a78;
+            margin-top: 0.2rem;
+        }
+
+        hr.divider-light {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e9f0;
+        }
+
+        .badge-award {
+            background: #fef6e0;
+            color: #b45f06;
+            border-radius: 40px;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1rem 1rem 3rem;
+            }
+            .card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- INTRO CARD with individual portfolio clarity -->
+    <div class="card" style="padding-bottom: 1.5rem;">
+        <div style="margin-bottom: 0.75rem;">
+            <span class="badge-award">✨ Individual Portfolio — Technical Program Manager</span>
+        </div>
+        <h1 style="font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; margin: 0.25rem 0 0.25rem 0; color: #0b2a3b;">Regine Sam.</h1>
+        <p style="font-size: 1.3rem; font-weight: 500; color: #2b6a9f; margin-bottom: 0.75rem;">Technology & Delivery Leader · Selangor, Malaysia</p>
+        <p style="font-size: 1rem; max-width: 85%; margin: 0.5rem 0 0.5rem 0; color: #2c4b6e;"><strong>The PM who used to write the code.</strong> 25 years in technology. The last 10+ growing from hands-on Java developer to Director of Engineering to leading delivery across a 13-team global programme — all inside one company I helped build from the ground up.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+            <div><span style="font-weight:800;">25+</span> Years in tech</div>
+            <div><span style="font-weight:800;">95%</span> On-time delivery</div>
+            <div><span style="font-weight:800;">16</span> Engineers led</div>
+            <div><span style="font-weight:800;">13</span> Scrum teams</div>
+        </div>
+        <div style="margin-top: 1rem; background: #f0f6fb; border-radius: 40px; padding: 0.5rem 1rem; display: inline-block;">
+            🏆 Pillars of Success Award Q4 2024 · Altrata — on-time delivery under sustained cross-team pressure.
+        </div>
+    </div>
+
+    <!-- WHAT I BRING (skills) -->
+    <div class="card">
+        <div class="section-title">What I bring</div>
+        <div class="grid-2col">
+            <div class="skill-group"><div class="skill-icon">🗂️</div><div class="skill-title">Programme & Delivery</div>I build governance structures that keep programmes visible. RAID, release planning, Scrum of Scrums.<div class="skill-tags"><span class="tag">RAID Management</span><span class="tag">Release Planning</span><span class="tag">Agile & Hybrid</span></div></div>
+            <div class="skill-group"><div class="skill-icon">🧯</div><div class="skill-title">Stakeholder & Risk</div>Rescued delayed projects, reset scope under CTO deadlines, and transparent executive communication.<div class="skill-tags"><span class="tag">Delivery Recovery</span><span class="tag">Risk Escalation</span><span class="tag">Stakeholder Alignment</span></div></div>
+            <div class="skill-group"><div class="skill-icon">🛠️</div><div class="skill-title">Technical Depth</div>Former Java dev. Read architecture, challenge estimates, code quality reviews.<div class="skill-tags"><span class="tag">AWS</span><span class="tag">Salesforce Integration</span><span class="tag">Elasticsearch</span><span class="tag">Databricks</span><span class="tag">Java</span></div></div>
+            <div class="skill-group"><div class="skill-icon">🌏</div><div class="skill-title">Cross-Cultural Delivery</div>Fluent in English, Mandarin, Cantonese, Malay. Worked across MY, UK, US, India.<div class="skill-tags"><span class="tag">Mandarin</span><span class="tag">Bahasa Malaysia</span><span class="tag">Global teams</span></div></div>
+        </div>
+    </div>
+
+    <!-- PROJECTS: key projects (detailed) + other deliveries (condensed scan-friendly) with scan note -->
+    <div class="card">
+        <div class="section-title">12 things I've delivered</div>
+        <div class="section-subhead">📍 Key projects (full detail) · Other deliveries (condensed — same outcomes, faster scan)</div>
+
+        <!-- ========= KEY PROJECTS (detailed) ========= -->
+        <div style="margin-bottom: 1rem; font-weight: 700; color: #1a5d82;">✦ KEY PROJECTS</div>
+
+        <!-- 1. AAA Platform -->
+        <div class="project-item">
+            <div class="project-header"><span class="project-name">AAA — Authentication, Authorization & Account</span><span class="project-meta">Jun 2023 – Apr 2024 · 23 people · 10 months</span></div>
+            <div>Built from scratch — Confirmed scope with PO and built structured plan across 3 cross-functional teams (API, Salesforce, front-end). Coordinated release planning, biweekly SoS, RAID reviews, Agile ceremonies. Established pentest sign-off as mandatory release gate — adopted programme-wide. <span class="project-outcome">Delivered on time</span></div>
+        </div>
+
+        <!-- 2. Salesforce Integration (Award) -->
+        <div class="project-item">
+            <div class="project-header"><span class="project-name">🏆 Salesforce Integration — Full 3-Phase Suite</span><span class="project-meta">Jan 2024 – Nov 2025 · 16–23 people/phase</span></div>
+            <div>Confirmed scope across 3 phases, managed API dependency contracts, monthly SteerCo, biweekly SoS. Phase 2: resolved React/Salesforce issues within contingency — on time. Phase 3: managed data delay transparently → 1-month slip, clear handover docs. <span class="project-outcome">All 3 published to Salesforce.org</span></div>
+        </div>
+
+        <!-- 3. Profile & Search API -->
+        <div class="project-item">
+            <div class="project-header"><span class="project-name">🏆 Profile & Search API — C&E + Wealth</span><span class="project-meta">Jan 2024 – Nov 2025 · 17 people · 2 phases</span></div>
+            <div>API central to all Altrata products. Ran SoS with upstream/downstream stakeholders, monthly SteerCo. Phase 1 delivered on time → directly contributed to Pillars of Success Award. Phase 2: 3-week data issue caused 2-week delay, managed with transparent communication. <span class="project-outcome">Ph1 on time</span></div>
+        </div>
+
+        <!-- 4. Bedrock Rescue -->
+        <div class="project-item">
+            <div class="project-header"><span class="project-name">Bedrock Phase I — CTO-Directed Rescue</span><span class="project-meta">Jan – Mar 2022 · 13 people · mid-project takeover</span></div>
+            <div>Brought in by CTO to recover 4-week delay. Re-assessed root cause, reworked scope/estimates with Team Lead, presented revised plan for approval. Daily stakeholder updates, weekly CTO reports, deferred low-priority items, navigated data integrity issues. <span class="project-outcome">Deadline saved (vendor contract expiry met)</span></div>
+        </div>
+
+        <hr class="divider-light">
+
+        <!-- ========= OTHER DELIVERIES (condensed 2-line format) ========= -->
+        <div style="margin: 1rem 0 0.5rem 0; font-weight: 600; color: #3f6b8c;">📄 OTHER DELIVERIES (8 projects — role, tech, outcome)</div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>05. Wealth Profile Build</span> <span class="project-outcome">Prototype ✓</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · AI-powered data extraction. Led scope, Agile ceremonies, RAID log, stakeholder escalations. Prototype verified by PO.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>06. Annual Report Extraction System</span> <span class="project-outcome">Delivered on time</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · AI extraction from public annual reports. Fixed Jan 2026 go-live deadline met. Managed sprints, RAID, weekly updates.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>07. Profile Requests — Credit-Based System</span> <span class="project-outcome">On time</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · 3 integrated components across 2 teams. Coordinated cross-team release, dependency management, stakeholder sign-offs.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>08. Altrata Insights — BI & Real-Time Analytics</span> <span class="project-outcome">On hold (budget)</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · AWS CloudWatch → Databricks pipeline. Consolidated two BI workstreams, all artefacts documented for resumption.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>09. AWS Aurora Database Migration</span> <span class="project-outcome">Zero disruption</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · MySQL 5.7 EOL deadline. Managed SQL compatibility, performance testing, zero production disruption.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>10. Credits Migration — Quota to Credit-Based</span> <span class="project-outcome">On time</span></div>
+            <div class="compact-desc"><strong>Project Manager</strong> · 3 request types. Escalated Salesforce CRM delay, mitigated downstream risk, delivered on schedule.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>11. On-Premises Screening Software Suite</span> <span class="project-outcome">On time · 2 platforms</span></div>
+            <div class="compact-desc"><strong>Manager & Developer</strong> · macOS installer (ShellScript + AppleScript), encryption, presales, on-site rollout. Windows + macOS.</div>
+        </div>
+
+        <div class="compact-project">
+            <div class="compact-title"><span>12. Search Engine Migration — Elasticsearch</span> <span class="project-outcome">~$20k/mo saved</span></div>
+            <div class="compact-desc"><strong>Manager & PM</strong> · Replaced Transparensee subscription. Gap analysis, architecture, code reviews, CTO sign-off. Built proprietary engine under hard expiry.</div>
+        </div>
+    </div>
+
+    <!-- CAREER HISTORY (condensed but clear) -->
+    <div class="card">
+        <div class="section-title">Full career history</div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div><span style="font-weight:800;">2026 — Present</span> — Open to senior IT & technology leadership roles · Malaysia</div>
+            <div><span style="font-weight:800;">Apr 2023 – Dec 2025</span> — Senior Project Manager (Technology Delivery Lead), Altrata · Led 13-team platform, 3-5 concurrent streams, built RAID governance, SteerCo reporting, won Pillars of Success.</div>
+            <div><span style="font-weight:800;">May 2020 – Mar 2023</span> — Director of Software Development, Wealth-X · Led 16 engineers, acting Head of Technology, improved delivery efficiency ~20%.</div>
+            <div><span style="font-weight:800;">Oct 2018 – Apr 2020</span> — Senior Software Development Manager · 95% on-time release, replaced $20k/mo search engine with Elasticsearch.</div>
+            <div><span style="font-weight:800;">Nov 2013 – Oct 2018</span> — Application Development Manager · Grew Malaysia team from 3 to 12, hands-on Java + Salesforce API build.</div>
+            <div><span style="font-weight:800;">2000–2013</span> — Software Engineering roles (Team Lead / Senior Developer) — Java, JSF, EJB, Oracle, national security systems, logistics.</div>
+        </div>
+    </div>
+
+    <!-- CREDENTIALS -->
+    <div class="card">
+        <div class="section-title">Credentials & education</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+            <div>
+                <p><strong>📜 Certifications</strong><br>PMP® — In progress (exam underway, prep completed Apr 2026)<br>MLOps Engineering on AWS (Dec 2025)<br>GenAI Essentials on AWS (Dec 2025)<br>ITIL® Foundation (Apr 2014)</p>
+            </div>
+            <div>
+                <p><strong>🎓 Education</strong><br>BSc (Hons) in Computing — Staffordshire University (2001)<br>Higher Diploma in Business IT — APIIT College (1999)<br>Certificate in Computer Studies — TARC (1997)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT & AVAILABILITY / final call to action -->
+    <div class="card" style="text-align: center; background: #fbfefe;">
+        <p style="font-size: 1.4rem; font-weight: 600;">Ready to bring structure, clarity, and delivery to your next programme.</p>
+        <p style="margin: 0.75rem 0;">Open to senior technology & delivery leadership roles in Malaysia. <strong>Available now.</strong></p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
+            <span>📧 regine.sam@gmail.com</span>
+            <span>🔗 linkedin.com/in/regine-sam</span>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.8rem; color: #5e7f9e;">📍 Selangor, Malaysia · Open to MY / SG roles</p>
+    </div>
+</div>
+
+<!-- optional simple JS for dynamic year or console greeting, but nothing heavy needed -->
+<script>
+    // tiny interaction: just to satisfy 'javascript' requirement, no intrusive behavior.
+    console.log("Portfolio v4 (optimized scan-friendly) — Regine Sam, TPM");
+    // optional hover effect or nothing, meets the requirement.
+    document.querySelectorAll('.project-outcome').forEach(el => {
+        el.setAttribute('aria-label', 'Key outcome highlighted');
+    });
+</script>
+</body>
+</html>
